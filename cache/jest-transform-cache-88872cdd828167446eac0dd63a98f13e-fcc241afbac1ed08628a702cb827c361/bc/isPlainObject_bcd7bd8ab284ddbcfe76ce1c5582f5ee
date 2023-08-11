@@ -1,0 +1,22 @@
+4caa382d56e914e6cf1a7d37e9535973
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = isPlainObject;
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  let proto = Object.getPrototypeOf(obj);
+  if (proto === null) return true;
+  let baseProto = proto;
+  while (Object.getPrototypeOf(baseProto) !== null) {
+    baseProto = Object.getPrototypeOf(baseProto);
+  }
+  return proto === baseProto;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJpc1BsYWluT2JqZWN0Iiwib2JqIiwicHJvdG8iLCJPYmplY3QiLCJnZXRQcm90b3R5cGVPZiIsImJhc2VQcm90byJdLCJzb3VyY2VzIjpbImlzUGxhaW5PYmplY3QuanMiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAcGFyYW0ge2FueX0gb2JqIFRoZSBvYmplY3QgdG8gaW5zcGVjdC5cbiAqIEByZXR1cm5zIHtib29sZWFufSBUcnVlIGlmIHRoZSBhcmd1bWVudCBhcHBlYXJzIHRvIGJlIGEgcGxhaW4gb2JqZWN0LlxuICovXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBpc1BsYWluT2JqZWN0KG9iaikge1xuICBpZiAodHlwZW9mIG9iaiAhPT0gJ29iamVjdCcgfHwgb2JqID09PSBudWxsKSByZXR1cm4gZmFsc2U7XG4gIGxldCBwcm90byA9IE9iamVjdC5nZXRQcm90b3R5cGVPZihvYmopO1xuICBpZiAocHJvdG8gPT09IG51bGwpIHJldHVybiB0cnVlO1xuICBsZXQgYmFzZVByb3RvID0gcHJvdG87XG5cbiAgd2hpbGUgKE9iamVjdC5nZXRQcm90b3R5cGVPZihiYXNlUHJvdG8pICE9PSBudWxsKSB7XG4gICAgYmFzZVByb3RvID0gT2JqZWN0LmdldFByb3RvdHlwZU9mKGJhc2VQcm90byk7XG4gIH1cblxuICByZXR1cm4gcHJvdG8gPT09IGJhc2VQcm90bztcbn0iXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ2UsU0FBU0EsYUFBYUEsQ0FBQ0MsR0FBRyxFQUFFO0VBQ3pDLElBQUksT0FBT0EsR0FBRyxLQUFLLFFBQVEsSUFBSUEsR0FBRyxLQUFLLElBQUksRUFBRSxPQUFPLEtBQUs7RUFDekQsSUFBSUMsS0FBSyxHQUFHQyxNQUFNLENBQUNDLGNBQWMsQ0FBQ0gsR0FBRyxDQUFDO0VBQ3RDLElBQUlDLEtBQUssS0FBSyxJQUFJLEVBQUUsT0FBTyxJQUFJO0VBQy9CLElBQUlHLFNBQVMsR0FBR0gsS0FBSztFQUVyQixPQUFPQyxNQUFNLENBQUNDLGNBQWMsQ0FBQ0MsU0FBUyxDQUFDLEtBQUssSUFBSSxFQUFFO0lBQ2hEQSxTQUFTLEdBQUdGLE1BQU0sQ0FBQ0MsY0FBYyxDQUFDQyxTQUFTLENBQUM7RUFDOUM7RUFFQSxPQUFPSCxLQUFLLEtBQUtHLFNBQVM7QUFDNUIifQ==

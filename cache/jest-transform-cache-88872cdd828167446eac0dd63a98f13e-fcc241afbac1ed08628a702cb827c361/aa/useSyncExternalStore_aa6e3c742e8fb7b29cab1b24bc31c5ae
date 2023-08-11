@@ -1,0 +1,12 @@
+b79d25b843d57c5bc7ba4db2ac094342
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.notInitialized = void 0;
+const notInitialized = () => {
+  throw new Error('uSES not initialized!');
+};
+exports.notInitialized = notInitialized;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJub3RJbml0aWFsaXplZCIsIkVycm9yIiwiZXhwb3J0cyJdLCJzb3VyY2VzIjpbInVzZVN5bmNFeHRlcm5hbFN0b3JlLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBub3RJbml0aWFsaXplZCA9ICgpID0+IHtcbiAgdGhyb3cgbmV3IEVycm9yKCd1U0VTIG5vdCBpbml0aWFsaXplZCEnKTtcbn07Il0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBTyxNQUFNQSxjQUFjLEdBQUdBLENBQUEsS0FBTTtFQUNsQyxNQUFNLElBQUlDLEtBQUssQ0FBQyx1QkFBdUIsQ0FBQztBQUMxQyxDQUFDO0FBQUNDLE9BQUEsQ0FBQUYsY0FBQSxHQUFBQSxjQUFBIn0=

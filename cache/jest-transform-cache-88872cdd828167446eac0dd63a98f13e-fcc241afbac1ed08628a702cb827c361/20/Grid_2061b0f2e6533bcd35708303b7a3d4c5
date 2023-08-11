@@ -1,0 +1,185 @@
+a0bf72dc54341ebe7afeaa1294edac86
+"use strict";
+'use client';
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _propTypes = _interopRequireDefault(require("prop-types"));
+var _createGrid = _interopRequireDefault(require("./createGrid"));
+/**
+ *
+ * Demos:
+ *
+ * - [Grid (Material UI)](https://mui.com/material-ui/react-grid/)
+ *
+ * API:
+ *
+ * - [Grid API](https://mui.com/system/api/grid/)
+ */
+const Grid = (0, _createGrid.default)();
+process.env.NODE_ENV !== "production" ? Grid.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit TypeScript types and run "yarn proptypes"  |
+  // ----------------------------------------------------------------------
+  /**
+   * The content of the component.
+   */
+  children: _propTypes.default.node,
+  /**
+   * The number of columns.
+   * @default 12
+   */
+  columns: _propTypes.default /* @typescript-to-proptypes-ignore */.oneOfType([_propTypes.default.arrayOf(_propTypes.default.number), _propTypes.default.number, _propTypes.default.object]),
+  /**
+   * Defines the horizontal space between the type `item` components.
+   * It overrides the value of the `spacing` prop.
+   */
+  columnSpacing: _propTypes.default /* @typescript-to-proptypes-ignore */.oneOfType([_propTypes.default.arrayOf(_propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])), _propTypes.default.number, _propTypes.default.object, _propTypes.default.string]),
+  /**
+   * If `true`, the component will have the flex *container* behavior.
+   * You should be wrapping *items* with a *container*.
+   * @default false
+   */
+  container: _propTypes.default.bool,
+  /**
+   * Defines the `flex-direction` style property.
+   * It is applied for all screen sizes.
+   * @default 'row'
+   */
+  direction: _propTypes.default /* @typescript-to-proptypes-ignore */.oneOfType([_propTypes.default.oneOf(['column-reverse', 'column', 'row-reverse', 'row']), _propTypes.default.arrayOf(_propTypes.default.oneOf(['column-reverse', 'column', 'row-reverse', 'row'])), _propTypes.default.object]),
+  /**
+   * If `true`, the negative margin and padding are apply only to the top and left sides of the grid.
+   */
+  disableEqualOverflow: _propTypes.default.bool,
+  /**
+   * If a number, it sets the number of columns the grid item uses.
+   * It can't be greater than the total number of columns of the container (12 by default).
+   * If 'auto', the grid item's width matches its content.
+   * If false, the prop is ignored.
+   * If true, the grid item's width grows to use the space available in the grid container.
+   * The value is applied for the `lg` breakpoint and wider screens if not overridden.
+   * @default false
+   */
+  lg: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number, _propTypes.default.bool]),
+  /**
+   * If a number, it sets the margin-left equals to the number of columns the grid item uses.
+   * If 'auto', the grid item push itself to the right-end of the container.
+   * The value is applied for the `lg` breakpoint and wider screens if not overridden.
+   */
+  lgOffset: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number]),
+  /**
+   * If a number, it sets the number of columns the grid item uses.
+   * It can't be greater than the total number of columns of the container (12 by default).
+   * If 'auto', the grid item's width matches its content.
+   * If false, the prop is ignored.
+   * If true, the grid item's width grows to use the space available in the grid container.
+   * The value is applied for the `md` breakpoint and wider screens if not overridden.
+   * @default false
+   */
+  md: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number, _propTypes.default.bool]),
+  /**
+   * If a number, it sets the margin-left equals to the number of columns the grid item uses.
+   * If 'auto', the grid item push itself to the right-end of the container.
+   * The value is applied for the `md` breakpoint and wider screens if not overridden.
+   */
+  mdOffset: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number]),
+  /**
+   * Defines the vertical space between the type `item` components.
+   * It overrides the value of the `spacing` prop.
+   */
+  rowSpacing: _propTypes.default /* @typescript-to-proptypes-ignore */.oneOfType([_propTypes.default.arrayOf(_propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])), _propTypes.default.number, _propTypes.default.object, _propTypes.default.string]),
+  /**
+   * If a number, it sets the number of columns the grid item uses.
+   * It can't be greater than the total number of columns of the container (12 by default).
+   * If 'auto', the grid item's width matches its content.
+   * If false, the prop is ignored.
+   * If true, the grid item's width grows to use the space available in the grid container.
+   * The value is applied for the `sm` breakpoint and wider screens if not overridden.
+   * @default false
+   */
+  sm: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number, _propTypes.default.bool]),
+  /**
+   * If a number, it sets the margin-left equals to the number of columns the grid item uses.
+   * If 'auto', the grid item push itself to the right-end of the container.
+   * The value is applied for the `sm` breakpoint and wider screens if not overridden.
+   */
+  smOffset: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number]),
+  /**
+   * Defines the space between the type `item` components.
+   * It can only be used on a type `container` component.
+   * @default 0
+   */
+  spacing: _propTypes.default /* @typescript-to-proptypes-ignore */.oneOfType([_propTypes.default.arrayOf(_propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])), _propTypes.default.number, _propTypes.default.object, _propTypes.default.string]),
+  /**
+   * @ignore
+   */
+  sx: _propTypes.default.oneOfType([_propTypes.default.arrayOf(_propTypes.default.oneOfType([_propTypes.default.func, _propTypes.default.object, _propTypes.default.bool])), _propTypes.default.func, _propTypes.default.object]),
+  /**
+   * @internal
+   * The level of the grid starts from `0`
+   * and increases when the grid nests inside another grid regardless of container or item.
+   *
+   * ```js
+   * <Grid> // level 0
+   *   <Grid> // level 1
+   *     <Grid> // level 2
+   *   <Grid> // level 1
+   * ```
+   *
+   * Only consecutive grid is considered nesting.
+   * A grid container will start at `0` if there are non-Grid element above it.
+   *
+   * ```js
+   * <Grid> // level 0
+   *   <div>
+   *     <Grid> // level 0
+   *       <Grid> // level 1
+   * ```
+   */
+  unstable_level: _propTypes.default.number,
+  /**
+   * Defines the `flex-wrap` style property.
+   * It's applied for all screen sizes.
+   * @default 'wrap'
+   */
+  wrap: _propTypes.default.oneOf(['nowrap', 'wrap-reverse', 'wrap']),
+  /**
+   * If a number, it sets the number of columns the grid item uses.
+   * It can't be greater than the total number of columns of the container (12 by default).
+   * If 'auto', the grid item's width matches its content.
+   * If false, the prop is ignored.
+   * If true, the grid item's width grows to use the space available in the grid container.
+   * The value is applied for the `xl` breakpoint and wider screens if not overridden.
+   * @default false
+   */
+  xl: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number, _propTypes.default.bool]),
+  /**
+   * If a number, it sets the margin-left equals to the number of columns the grid item uses.
+   * If 'auto', the grid item push itself to the right-end of the container.
+   * The value is applied for the `xl` breakpoint and wider screens if not overridden.
+   */
+  xlOffset: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number]),
+  /**
+   * If a number, it sets the number of columns the grid item uses.
+   * It can't be greater than the total number of columns of the container (12 by default).
+   * If 'auto', the grid item's width matches its content.
+   * If false, the prop is ignored.
+   * If true, the grid item's width grows to use the space available in the grid container.
+   * The value is applied for all the screen sizes with the lowest priority.
+   * @default false
+   */
+  xs: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number, _propTypes.default.bool]),
+  /**
+   * If a number, it sets the margin-left equals to the number of columns the grid item uses.
+   * If 'auto', the grid item push itself to the right-end of the container.
+   * The value is applied for the `xs` breakpoint and wider screens if not overridden.
+   */
+  xsOffset: _propTypes.default.oneOfType([_propTypes.default.oneOf(['auto']), _propTypes.default.number])
+} : void 0;
+var _default = Grid;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfaW50ZXJvcFJlcXVpcmVEZWZhdWx0IiwicmVxdWlyZSIsIk9iamVjdCIsImRlZmluZVByb3BlcnR5IiwiZXhwb3J0cyIsInZhbHVlIiwiZGVmYXVsdCIsIl9wcm9wVHlwZXMiLCJfY3JlYXRlR3JpZCIsIkdyaWQiLCJwcm9jZXNzIiwiZW52IiwiTk9ERV9FTlYiLCJwcm9wVHlwZXMiLCJjaGlsZHJlbiIsIm5vZGUiLCJjb2x1bW5zIiwib25lT2ZUeXBlIiwiYXJyYXlPZiIsIm51bWJlciIsIm9iamVjdCIsImNvbHVtblNwYWNpbmciLCJzdHJpbmciLCJjb250YWluZXIiLCJib29sIiwiZGlyZWN0aW9uIiwib25lT2YiLCJkaXNhYmxlRXF1YWxPdmVyZmxvdyIsImxnIiwibGdPZmZzZXQiLCJtZCIsIm1kT2Zmc2V0Iiwicm93U3BhY2luZyIsInNtIiwic21PZmZzZXQiLCJzcGFjaW5nIiwic3giLCJmdW5jIiwidW5zdGFibGVfbGV2ZWwiLCJ3cmFwIiwieGwiLCJ4bE9mZnNldCIsInhzIiwieHNPZmZzZXQiLCJfZGVmYXVsdCJdLCJzb3VyY2VzIjpbIkdyaWQuanMiXSwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG4ndXNlIGNsaWVudCc7XG5cbnZhciBfaW50ZXJvcFJlcXVpcmVEZWZhdWx0ID0gcmVxdWlyZShcIkBiYWJlbC9ydW50aW1lL2hlbHBlcnMvaW50ZXJvcFJlcXVpcmVEZWZhdWx0XCIpO1xuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7XG4gIHZhbHVlOiB0cnVlXG59KTtcbmV4cG9ydHMuZGVmYXVsdCA9IHZvaWQgMDtcbnZhciBfcHJvcFR5cGVzID0gX2ludGVyb3BSZXF1aXJlRGVmYXVsdChyZXF1aXJlKFwicHJvcC10eXBlc1wiKSk7XG52YXIgX2NyZWF0ZUdyaWQgPSBfaW50ZXJvcFJlcXVpcmVEZWZhdWx0KHJlcXVpcmUoXCIuL2NyZWF0ZUdyaWRcIikpO1xuLyoqXG4gKlxuICogRGVtb3M6XG4gKlxuICogLSBbR3JpZCAoTWF0ZXJpYWwgVUkpXShodHRwczovL211aS5jb20vbWF0ZXJpYWwtdWkvcmVhY3QtZ3JpZC8pXG4gKlxuICogQVBJOlxuICpcbiAqIC0gW0dyaWQgQVBJXShodHRwczovL211aS5jb20vc3lzdGVtL2FwaS9ncmlkLylcbiAqL1xuY29uc3QgR3JpZCA9ICgwLCBfY3JlYXRlR3JpZC5kZWZhdWx0KSgpO1xucHJvY2Vzcy5lbnYuTk9ERV9FTlYgIT09IFwicHJvZHVjdGlvblwiID8gR3JpZC5wcm9wVHlwZXMgLyogcmVtb3ZlLXByb3B0eXBlcyAqLyA9IHtcbiAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gV2FybmluZyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAvLyB8IFRoZXNlIFByb3BUeXBlcyBhcmUgZ2VuZXJhdGVkIGZyb20gdGhlIFR5cGVTY3JpcHQgdHlwZSBkZWZpbml0aW9ucyB8XG4gIC8vIHwgICAgIFRvIHVwZGF0ZSB0aGVtIGVkaXQgVHlwZVNjcmlwdCB0eXBlcyBhbmQgcnVuIFwieWFybiBwcm9wdHlwZXNcIiAgfFxuICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gIC8qKlxuICAgKiBUaGUgY29udGVudCBvZiB0aGUgY29tcG9uZW50LlxuICAgKi9cbiAgY2hpbGRyZW46IF9wcm9wVHlwZXMuZGVmYXVsdC5ub2RlLFxuICAvKipcbiAgICogVGhlIG51bWJlciBvZiBjb2x1bW5zLlxuICAgKiBAZGVmYXVsdCAxMlxuICAgKi9cbiAgY29sdW1uczogX3Byb3BUeXBlcy5kZWZhdWx0IC8qIEB0eXBlc2NyaXB0LXRvLXByb3B0eXBlcy1pZ25vcmUgKi8ub25lT2ZUeXBlKFtfcHJvcFR5cGVzLmRlZmF1bHQuYXJyYXlPZihfcHJvcFR5cGVzLmRlZmF1bHQubnVtYmVyKSwgX3Byb3BUeXBlcy5kZWZhdWx0Lm51bWJlciwgX3Byb3BUeXBlcy5kZWZhdWx0Lm9iamVjdF0pLFxuICAvKipcbiAgICogRGVmaW5lcyB0aGUgaG9yaXpvbnRhbCBzcGFjZSBiZXR3ZWVuIHRoZSB0eXBlIGBpdGVtYCBjb21wb25lbnRzLlxuICAgKiBJdCBvdmVycmlkZXMgdGhlIHZhbHVlIG9mIHRoZSBgc3BhY2luZ2AgcHJvcC5cbiAgICovXG4gIGNvbHVtblNwYWNpbmc6IF9wcm9wVHlwZXMuZGVmYXVsdCAvKiBAdHlwZXNjcmlwdC10by1wcm9wdHlwZXMtaWdub3JlICovLm9uZU9mVHlwZShbX3Byb3BUeXBlcy5kZWZhdWx0LmFycmF5T2YoX3Byb3BUeXBlcy5kZWZhdWx0Lm9uZU9mVHlwZShbX3Byb3BUeXBlcy5kZWZhdWx0Lm51bWJlciwgX3Byb3BUeXBlcy5kZWZhdWx0LnN0cmluZ10pKSwgX3Byb3BUeXBlcy5kZWZhdWx0Lm51bWJlciwgX3Byb3BUeXBlcy5kZWZhdWx0Lm9iamVjdCwgX3Byb3BUeXBlcy5kZWZhdWx0LnN0cmluZ10pLFxuICAvKipcbiAgICogSWYgYHRydWVgLCB0aGUgY29tcG9uZW50IHdpbGwgaGF2ZSB0aGUgZmxleCAqY29udGFpbmVyKiBiZWhhdmlvci5cbiAgICogWW91IHNob3VsZCBiZSB3cmFwcGluZyAqaXRlbXMqIHdpdGggYSAqY29udGFpbmVyKi5cbiAgICogQGRlZmF1bHQgZmFsc2VcbiAgICovXG4gIGNvbnRhaW5lcjogX3Byb3BUeXBlcy5kZWZhdWx0LmJvb2wsXG4gIC8qKlxuICAgKiBEZWZpbmVzIHRoZSBgZmxleC1kaXJlY3Rpb25gIHN0eWxlIHByb3BlcnR5LlxuICAgKiBJdCBpcyBhcHBsaWVkIGZvciBhbGwgc2NyZWVuIHNpemVzLlxuICAgKiBAZGVmYXVsdCAncm93J1xuICAgKi9cbiAgZGlyZWN0aW9uOiBfcHJvcFR5cGVzLmRlZmF1bHQgLyogQHR5cGVzY3JpcHQtdG8tcHJvcHR5cGVzLWlnbm9yZSAqLy5vbmVPZlR5cGUoW19wcm9wVHlwZXMuZGVmYXVsdC5vbmVPZihbJ2NvbHVtbi1yZXZlcnNlJywgJ2NvbHVtbicsICdyb3ctcmV2ZXJzZScsICdyb3cnXSksIF9wcm9wVHlwZXMuZGVmYXVsdC5hcnJheU9mKF9wcm9wVHlwZXMuZGVmYXVsdC5vbmVPZihbJ2NvbHVtbi1yZXZlcnNlJywgJ2NvbHVtbicsICdyb3ctcmV2ZXJzZScsICdyb3cnXSkpLCBfcHJvcFR5cGVzLmRlZmF1bHQub2JqZWN0XSksXG4gIC8qKlxuICAgKiBJZiBgdHJ1ZWAsIHRoZSBuZWdhdGl2ZSBtYXJnaW4gYW5kIHBhZGRpbmcgYXJlIGFwcGx5IG9ubHkgdG8gdGhlIHRvcCBhbmQgbGVmdCBzaWRlcyBvZiB0aGUgZ3JpZC5cbiAgICovXG4gIGRpc2FibGVFcXVhbE92ZXJmbG93OiBfcHJvcFR5cGVzLmRlZmF1bHQuYm9vbCxcbiAgLyoqXG4gICAqIElmIGEgbnVtYmVyLCBpdCBzZXRzIHRoZSBudW1iZXIgb2YgY29sdW1ucyB0aGUgZ3JpZCBpdGVtIHVzZXMuXG4gICAqIEl0IGNhbid0IGJlIGdyZWF0ZXIgdGhhbiB0aGUgdG90YWwgbnVtYmVyIG9mIGNvbHVtbnMgb2YgdGhlIGNvbnRhaW5lciAoMTIgYnkgZGVmYXVsdCkuXG4gICAqIElmICdhdXRvJywgdGhlIGdyaWQgaXRlbSdzIHdpZHRoIG1hdGNoZXMgaXRzIGNvbnRlbnQuXG4gICAqIElmIGZhbHNlLCB0aGUgcHJvcCBpcyBpZ25vcmVkLlxuICAgKiBJZiB0cnVlLCB0aGUgZ3JpZCBpdGVtJ3Mgd2lkdGggZ3Jvd3MgdG8gdXNlIHRoZSBzcGFjZSBhdmFpbGFibGUgaW4gdGhlIGdyaWQgY29udGFpbmVyLlxuICAgKiBUaGUgdmFsdWUgaXMgYXBwbGllZCBmb3IgdGhlIGBsZ2AgYnJlYWtwb2ludCBhbmQgd2lkZXIgc2NyZWVucyBpZiBub3Qgb3ZlcnJpZGRlbi5cbiAgICogQGRlZmF1bHQgZmFsc2VcbiAgICovXG4gIGxnOiBfcHJvcFR5cGVzLmRlZmF1bHQub25lT2ZUeXBlKFtfcHJvcFR5cGVzLmRlZmF1bHQub25lT2YoWydhdXRvJ10pLCBfcHJvcFR5cGVzLmRlZmF1bHQubnVtYmVyLCBfcHJvcFR5cGVzLmRlZmF1bHQuYm9vbF0pLFxuICAvKipcbiAgICogSWYgYSBudW1iZXIsIGl0IHNldHMgdGhlIG1hcmdpbi1sZWZ0IGVxdWFscyB0byB0aGUgbnVtYmVyIG9mIGNvbHVtbnMgdGhlIGdyaWQgaXRlbSB1c2VzLlxuICAgKiBJZiAnYXV0bycsIHRoZSBncmlkIGl0ZW0gcHVzaCBpdHNlbGYgdG8gdGhlIHJpZ2h0LWVuZCBvZiB0aGUgY29udGFpbmVyLlxuICAgKiBUaGUgdmFsdWUgaXMgYXBwbGllZCBmb3IgdGhlIGBsZ2AgYnJlYWtwb2ludCBhbmQgd2lkZXIgc2NyZWVucyBpZiBub3Qgb3ZlcnJpZGRlbi5cbiAgICovXG4gIGxnT2Zmc2V0OiBfcHJvcFR5cGVzLmRlZmF1bHQub25lT2ZUeXBlKFtfcHJvcFR5cGVzLmRlZmF1bHQub25lT2YoWydhdXRvJ10pLCBfcHJvcFR5cGVzLmRlZmF1bHQubnVtYmVyXSksXG4gIC8qKlxuICAgKiBJZiBhIG51bWJlciwgaXQgc2V0cyB0aGUgbnVtYmVyIG9mIGNvbHVtbnMgdGhlIGdyaWQgaXRlbSB1c2VzLlxuICAgKiBJdCBjYW4ndCBiZSBncmVhdGVyIHRoYW4gdGhlIHRvdGFsIG51bWJlciBvZiBjb2x1bW5zIG9mIHRoZSBjb250YWluZXIgKDEyIGJ5IGRlZmF1bHQpLlxuICAgKiBJZiAnYXV0bycsIHRoZSBncmlkIGl0ZW0ncyB3aWR0aCBtYXRjaGVzIGl0cyBjb250ZW50LlxuICAgKiBJZiBmYWxzZSwgdGhlIHByb3AgaXMgaWdub3JlZC5cbiAgICogSWYgdHJ1ZSwgdGhlIGdyaWQgaXRlbSdzIHdpZHRoIGdyb3dzIHRvIHVzZSB0aGUgc3BhY2UgYXZhaWxhYmxlIGluIHRoZSBncmlkIGNvbnRhaW5lci5cbiAgICogVGhlIHZhbHVlIGlzIGFwcGxpZWQgZm9yIHRoZSBgbWRgIGJyZWFrcG9pbnQgYW5kIHdpZGVyIHNjcmVlbnMgaWYgbm90IG92ZXJyaWRkZW4uXG4gICAqIEBkZWZhdWx0IGZhbHNlXG4gICAqL1xuICBtZDogX3Byb3BUeXBlcy5kZWZhdWx0Lm9uZU9mVHlwZShbX3Byb3BUeXBlcy5kZWZhdWx0Lm9uZU9mKFsnYXV0byddKSwgX3Byb3BUeXBlcy5kZWZhdWx0Lm51bWJlciwgX3Byb3BUeXBlcy5kZWZhdWx0LmJvb2xdKSxcbiAgLyoqXG4gICAqIElmIGEgbnVtYmVyLCBpdCBzZXRzIHRoZSBtYXJnaW4tbGVmdCBlcXVhbHMgdG8gdGhlIG51bWJlciBvZiBjb2x1bW5zIHRoZSBncmlkIGl0ZW0gdXNlcy5cbiAgICogSWYgJ2F1dG8nLCB0aGUgZ3JpZCBpdGVtIHB1c2ggaXRzZWxmIHRvIHRoZSByaWdodC1lbmQgb2YgdGhlIGNvbnRhaW5lci5cbiAgICogVGhlIHZhbHVlIGlzIGFwcGxpZWQgZm9yIHRoZSBgbWRgIGJyZWFrcG9pbnQgYW5kIHdpZGVyIHNjcmVlbnMgaWYgbm90IG92ZXJyaWRkZW4uXG4gICAqL1xuICBtZE9mZnNldDogX3Byb3BUeXBlcy5kZWZhdWx0Lm9uZU9mVHlwZShbX3Byb3BUeXBlcy5kZWZhdWx0Lm9uZU9mKFsnYXV0byddKSwgX3Byb3BUeXBlcy5kZWZhdWx0Lm51bWJlcl0pLFxuICAvKipcbiAgICogRGVmaW5lcyB0aGUgdmVydGljYWwgc3BhY2UgYmV0d2VlbiB0aGUgdHlwZSBgaXRlbWAgY29tcG9uZW50cy5cbiAgICogSXQgb3ZlcnJpZGVzIHRoZSB2YWx1ZSBvZiB0aGUgYHNwYWNpbmdgIHByb3AuXG4gICAqL1xuICByb3dTcGFjaW5nOiBfcHJvcFR5cGVzLmRlZmF1bHQgLyogQHR5cGVzY3JpcHQtdG8tcHJvcHR5cGVzLWlnbm9yZSAqLy5vbmVPZlR5cGUoW19wcm9wVHlwZXMuZGVmYXVsdC5hcnJheU9mKF9wcm9wVHlwZXMuZGVmYXVsdC5vbmVPZlR5cGUoW19wcm9wVHlwZXMuZGVmYXVsdC5udW1iZXIsIF9wcm9wVHlwZXMuZGVmYXVsdC5zdHJpbmddKSksIF9wcm9wVHlwZXMuZGVmYXVsdC5udW1iZXIsIF9wcm9wVHlwZXMuZGVmYXVsdC5vYmplY3QsIF9wcm9wVHlwZXMuZGVmYXVsdC5zdHJpbmddKSxcbiAgLyoqXG4gICAqIElmIGEgbnVtYmVyLCBpdCBzZXRzIHRoZSBudW1iZXIgb2YgY29sdW1ucyB0aGUgZ3JpZCBpdGVtIHVzZXMuXG4gICAqIEl0IGNhbid0IGJlIGdyZWF0ZXIgdGhhbiB0aGUgdG90YWwgbnVtYmVyIG9mIGNvbHVtbnMgb2YgdGhlIGNvbnRhaW5lciAoMTIgYnkgZGVmYXVsdCkuXG4gICAqIElmICdhdXRvJywgdGhlIGdyaWQgaXRlbSdzIHdpZHRoIG1hdGNoZXMgaXRzIGNvbnRlbnQuXG4gICAqIElmIGZhbHNlLCB0aGUgcHJvcCBpcyBpZ25vcmVkLlxuICAgKiBJZiB0cnVlLCB0aGUgZ3JpZCBpdGVtJ3Mgd2lkdGggZ3Jvd3MgdG8gdXNlIHRoZSBzcGFjZSBhdmFpbGFibGUgaW4gdGhlIGdyaWQgY29udGFpbmVyLlxuICAgKiBUaGUgdmFsdWUgaXMgYXBwbGllZCBmb3IgdGhlIGBzbWAgYnJlYWtwb2ludCBhbmQgd2lkZXIgc2NyZWVucyBpZiBub3Qgb3ZlcnJpZGRlbi5cbiAgICogQGRlZmF1bHQgZmFsc2VcbiAgICovXG4gIHNtOiBfcHJvcFR5cGVzLmRlZmF1bHQub25lT2ZUeXBlKFtfcHJvcFR5cGVzLmRlZmF1bHQub25lT2YoWydhdXRvJ10pLCBfcHJvcFR5cGVzLmRlZmF1bHQubnVtYmVyLCBfcHJvcFR5cGVzLmRlZmF1bHQuYm9vbF0pLFxuICAvKipcbiAgICogSWYgYSBudW1iZXIsIGl0IHNldHMgdGhlIG1hcmdpbi1sZWZ0IGVxdWFscyB0byB0aGUgbnVtYmVyIG9mIGNvbHVtbnMgdGhlIGdyaWQgaXRlbSB1c2VzLlxuICAgKiBJZiAnYXV0bycsIHRoZSBncmlkIGl0ZW0gcHVzaCBpdHNlbGYgdG8gdGhlIHJpZ2h0LWVuZCBvZiB0aGUgY29udGFpbmVyLlxuICAgKiBUaGUgdmFsdWUgaXMgYXBwbGllZCBmb3IgdGhlIGBzbWAgYnJlYWtwb2ludCBhbmQgd2lkZXIgc2NyZWVucyBpZiBub3Qgb3ZlcnJpZGRlbi5cbiAgICovXG4gIHNtT2Zmc2V0OiBfcHJvcFR5cGVzLmRlZmF1bHQub25lT2ZUeXBlKFtfcHJvcFR5cGVzLmRlZmF1bHQub25lT2YoWydhdXRvJ10pLCBfcHJvcFR5cGVzLmRlZmF1bHQubnVtYmVyXSksXG4gIC8qKlxuICAgKiBEZWZpbmVzIHRoZSBzcGFjZSBiZXR3ZWVuIHRoZSB0eXBlIGBpdGVtYCBjb21wb25lbnRzLlxuICAgKiBJdCBjYW4gb25seSBiZSB1c2VkIG9uIGEgdHlwZSBgY29udGFpbmVyYCBjb21wb25lbnQuXG4gICAqIEBkZWZhdWx0IDBcbiAgICovXG4gIHNwYWNpbmc6IF9wcm9wVHlwZXMuZGVmYXVsdCAvKiBAdHlwZXNjcmlwdC10by1wcm9wdHlwZXMtaWdub3JlICovLm9uZU9mVHlwZShbX3Byb3BUeXBlcy5kZWZhdWx0LmFycmF5T2YoX3Byb3BUeXBlcy5kZWZhdWx0Lm9uZU9mVHlwZShbX3Byb3BUeXBlcy5kZWZhdWx0Lm51bWJlciwgX3Byb3BUeXBlcy5kZWZhdWx0LnN0cmluZ10pKSwgX3Byb3BUeXBlcy5kZWZhdWx0Lm51bWJlciwgX3Byb3BUeXBlcy5kZWZhdWx0Lm9iamVjdCwgX3Byb3BUeXBlcy5kZWZhdWx0LnN0cmluZ10pLFxuICAvKipcbiAgICogQGlnbm9yZVxuICAgKi9cbiAgc3g6IF9wcm9wVHlwZXMuZGVmYXVsdC5vbmVPZlR5cGUoW19wcm9wVHlwZXMuZGVmYXVsdC5hcnJheU9mKF9wcm9wVHlwZXMuZGVmYXVsdC5vbmVPZlR5cGUoW19wcm9wVHlwZXMuZGVmYXVsdC5mdW5jLCBfcHJvcFR5cGVzLmRlZmF1bHQub2JqZWN0LCBfcHJvcFR5cGVzLmRlZmF1bHQuYm9vbF0pKSwgX3Byb3BUeXBlcy5kZWZhdWx0LmZ1bmMsIF9wcm9wVHlwZXMuZGVmYXVsdC5vYmplY3RdKSxcbiAgLyoqXG4gICAqIEBpbnRlcm5hbFxuICAgKiBUaGUgbGV2ZWwgb2YgdGhlIGdyaWQgc3RhcnRzIGZyb20gYDBgXG4gICAqIGFuZCBpbmNyZWFzZXMgd2hlbiB0aGUgZ3JpZCBuZXN0cyBpbnNpZGUgYW5vdGhlciBncmlkIHJlZ2FyZGxlc3Mgb2YgY29udGFpbmVyIG9yIGl0ZW0uXG4gICAqXG4gICAqIGBgYGpzXG4gICAqIDxHcmlkPiAvLyBsZXZlbCAwXG4gICAqICAgPEdyaWQ+IC8vIGxldmVsIDFcbiAgICogICAgIDxHcmlkPiAvLyBsZXZlbCAyXG4gICAqICAgPEdyaWQ+IC8vIGxldmVsIDFcbiAgICogYGBgXG4gICAqXG4gICAqIE9ubHkgY29uc2VjdXRpdmUgZ3JpZCBpcyBjb25zaWRlcmVkIG5lc3RpbmcuXG4gICAqIEEgZ3JpZCBjb250YWluZXIgd2lsbCBzdGFydCBhdCBgMGAgaWYgdGhlcmUgYXJlIG5vbi1HcmlkIGVsZW1lbnQgYWJvdmUgaXQuXG4gICAqXG4gICAqIGBgYGpzXG4gICAqIDxHcmlkPiAvLyBsZXZlbCAwXG4gICAqICAgPGRpdj5cbiAgICogICAgIDxHcmlkPiAvLyBsZXZlbCAwXG4gICAqICAgICAgIDxHcmlkPiAvLyBsZXZlbCAxXG4gICAqIGBgYFxuICAgKi9cbiAgdW5zdGFibGVfbGV2ZWw6IF9wcm9wVHlwZXMuZGVmYXVsdC5udW1iZXIsXG4gIC8qKlxuICAgKiBEZWZpbmVzIHRoZSBgZmxleC13cmFwYCBzdHlsZSBwcm9wZXJ0eS5cbiAgICogSXQncyBhcHBsaWVkIGZvciBhbGwgc2NyZWVuIHNpemVzLlxuICAgKiBAZGVmYXVsdCAnd3JhcCdcbiAgICovXG4gIHdyYXA6IF9wcm9wVHlwZXMuZGVmYXVsdC5vbmVPZihbJ25vd3JhcCcsICd3cmFwLXJldmVyc2UnLCAnd3JhcCddKSxcbiAgLyoqXG4gICAqIElmIGEgbnVtYmVyLCBpdCBzZXRzIHRoZSBudW1iZXIgb2YgY29sdW1ucyB0aGUgZ3JpZCBpdGVtIHVzZXMuXG4gICAqIEl0IGNhbid0IGJlIGdyZWF0ZXIgdGhhbiB0aGUgdG90YWwgbnVtYmVyIG9mIGNvbHVtbnMgb2YgdGhlIGNvbnRhaW5lciAoMTIgYnkgZGVmYXVsdCkuXG4gICAqIElmICdhdXRvJywgdGhlIGdyaWQgaXRlbSdzIHdpZHRoIG1hdGNoZXMgaXRzIGNvbnRlbnQuXG4gICAqIElmIGZhbHNlLCB0aGUgcHJvcCBpcyBpZ25vcmVkLlxuICAgKiBJZiB0cnVlLCB0aGUgZ3JpZCBpdGVtJ3Mgd2lkdGggZ3Jvd3MgdG8gdXNlIHRoZSBzcGFjZSBhdmFpbGFibGUgaW4gdGhlIGdyaWQgY29udGFpbmVyLlxuICAgKiBUaGUgdmFsdWUgaXMgYXBwbGllZCBmb3IgdGhlIGB4bGAgYnJlYWtwb2ludCBhbmQgd2lkZXIgc2NyZWVucyBpZiBub3Qgb3ZlcnJpZGRlbi5cbiAgICogQGRlZmF1bHQgZmFsc2VcbiAgICovXG4gIHhsOiBfcHJvcFR5cGVzLmRlZmF1bHQub25lT2ZUeXBlKFtfcHJvcFR5cGVzLmRlZmF1bHQub25lT2YoWydhdXRvJ10pLCBfcHJvcFR5cGVzLmRlZmF1bHQubnVtYmVyLCBfcHJvcFR5cGVzLmRlZmF1bHQuYm9vbF0pLFxuICAvKipcbiAgICogSWYgYSBudW1iZXIsIGl0IHNldHMgdGhlIG1hcmdpbi1sZWZ0IGVxdWFscyB0byB0aGUgbnVtYmVyIG9mIGNvbHVtbnMgdGhlIGdyaWQgaXRlbSB1c2VzLlxuICAgKiBJZiAnYXV0bycsIHRoZSBncmlkIGl0ZW0gcHVzaCBpdHNlbGYgdG8gdGhlIHJpZ2h0LWVuZCBvZiB0aGUgY29udGFpbmVyLlxuICAgKiBUaGUgdmFsdWUgaXMgYXBwbGllZCBmb3IgdGhlIGB4bGAgYnJlYWtwb2ludCBhbmQgd2lkZXIgc2NyZWVucyBpZiBub3Qgb3ZlcnJpZGRlbi5cbiAgICovXG4gIHhsT2Zmc2V0OiBfcHJvcFR5cGVzLmRlZmF1bHQub25lT2ZUeXBlKFtfcHJvcFR5cGVzLmRlZmF1bHQub25lT2YoWydhdXRvJ10pLCBfcHJvcFR5cGVzLmRlZmF1bHQubnVtYmVyXSksXG4gIC8qKlxuICAgKiBJZiBhIG51bWJlciwgaXQgc2V0cyB0aGUgbnVtYmVyIG9mIGNvbHVtbnMgdGhlIGdyaWQgaXRlbSB1c2VzLlxuICAgKiBJdCBjYW4ndCBiZSBncmVhdGVyIHRoYW4gdGhlIHRvdGFsIG51bWJlciBvZiBjb2x1bW5zIG9mIHRoZSBjb250YWluZXIgKDEyIGJ5IGRlZmF1bHQpLlxuICAgKiBJZiAnYXV0bycsIHRoZSBncmlkIGl0ZW0ncyB3aWR0aCBtYXRjaGVzIGl0cyBjb250ZW50LlxuICAgKiBJZiBmYWxzZSwgdGhlIHByb3AgaXMgaWdub3JlZC5cbiAgICogSWYgdHJ1ZSwgdGhlIGdyaWQgaXRlbSdzIHdpZHRoIGdyb3dzIHRvIHVzZSB0aGUgc3BhY2UgYXZhaWxhYmxlIGluIHRoZSBncmlkIGNvbnRhaW5lci5cbiAgICogVGhlIHZhbHVlIGlzIGFwcGxpZWQgZm9yIGFsbCB0aGUgc2NyZWVuIHNpemVzIHdpdGggdGhlIGxvd2VzdCBwcmlvcml0eS5cbiAgICogQGRlZmF1bHQgZmFsc2VcbiAgICovXG4gIHhzOiBfcHJvcFR5cGVzLmRlZmF1bHQub25lT2ZUeXBlKFtfcHJvcFR5cGVzLmRlZmF1bHQub25lT2YoWydhdXRvJ10pLCBfcHJvcFR5cGVzLmRlZmF1bHQubnVtYmVyLCBfcHJvcFR5cGVzLmRlZmF1bHQuYm9vbF0pLFxuICAvKipcbiAgICogSWYgYSBudW1iZXIsIGl0IHNldHMgdGhlIG1hcmdpbi1sZWZ0IGVxdWFscyB0byB0aGUgbnVtYmVyIG9mIGNvbHVtbnMgdGhlIGdyaWQgaXRlbSB1c2VzLlxuICAgKiBJZiAnYXV0bycsIHRoZSBncmlkIGl0ZW0gcHVzaCBpdHNlbGYgdG8gdGhlIHJpZ2h0LWVuZCBvZiB0aGUgY29udGFpbmVyLlxuICAgKiBUaGUgdmFsdWUgaXMgYXBwbGllZCBmb3IgdGhlIGB4c2AgYnJlYWtwb2ludCBhbmQgd2lkZXIgc2NyZWVucyBpZiBub3Qgb3ZlcnJpZGRlbi5cbiAgICovXG4gIHhzT2Zmc2V0OiBfcHJvcFR5cGVzLmRlZmF1bHQub25lT2ZUeXBlKFtfcHJvcFR5cGVzLmRlZmF1bHQub25lT2YoWydhdXRvJ10pLCBfcHJvcFR5cGVzLmRlZmF1bHQubnVtYmVyXSlcbn0gOiB2b2lkIDA7XG52YXIgX2RlZmF1bHQgPSBHcmlkO1xuZXhwb3J0cy5k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

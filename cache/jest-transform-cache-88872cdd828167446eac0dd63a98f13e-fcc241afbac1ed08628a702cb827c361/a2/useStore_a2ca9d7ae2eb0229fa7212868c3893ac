@@ -1,0 +1,48 @@
+2cce5accca95ba72fb2c0bac5203043e
+"use strict";
+
+exports.__esModule = true;
+exports.createStoreHook = createStoreHook;
+exports.useStore = void 0;
+var _Context = require("../components/Context");
+var _useReduxContext = require("./useReduxContext");
+
+/**
+ * Hook factory, which creates a `useStore` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useStore` hook bound to the specified context.
+ */
+function createStoreHook(context = _Context.ReactReduxContext) {
+  const useReduxContext =
+  // @ts-ignore
+  context === _Context.ReactReduxContext ? _useReduxContext.useReduxContext :
+  // @ts-ignore
+  (0, _useReduxContext.createReduxContextHook)(context);
+  return function useStore() {
+    const {
+      store
+    } = useReduxContext(); // @ts-ignore
+
+    return store;
+  };
+}
+/**
+ * A hook to access the redux store.
+ *
+ * @returns {any} the redux store
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useStore } from 'react-redux'
+ *
+ * export const ExampleComponent = () => {
+ *   const store = useStore()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+const useStore = /*#__PURE__*/createStoreHook();
+exports.useStore = useStore;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJleHBvcnRzIiwiX19lc01vZHVsZSIsImNyZWF0ZVN0b3JlSG9vayIsInVzZVN0b3JlIiwiX0NvbnRleHQiLCJyZXF1aXJlIiwiX3VzZVJlZHV4Q29udGV4dCIsImNvbnRleHQiLCJSZWFjdFJlZHV4Q29udGV4dCIsInVzZVJlZHV4Q29udGV4dCIsImNyZWF0ZVJlZHV4Q29udGV4dEhvb2siLCJzdG9yZSJdLCJzb3VyY2VzIjpbInVzZVN0b3JlLmpzIl0sInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xuXG5leHBvcnRzLl9fZXNNb2R1bGUgPSB0cnVlO1xuZXhwb3J0cy5jcmVhdGVTdG9yZUhvb2sgPSBjcmVhdGVTdG9yZUhvb2s7XG5leHBvcnRzLnVzZVN0b3JlID0gdm9pZCAwO1xuXG52YXIgX0NvbnRleHQgPSByZXF1aXJlKFwiLi4vY29tcG9uZW50cy9Db250ZXh0XCIpO1xuXG52YXIgX3VzZVJlZHV4Q29udGV4dCA9IHJlcXVpcmUoXCIuL3VzZVJlZHV4Q29udGV4dFwiKTtcblxuLyoqXG4gKiBIb29rIGZhY3RvcnksIHdoaWNoIGNyZWF0ZXMgYSBgdXNlU3RvcmVgIGhvb2sgYm91bmQgdG8gYSBnaXZlbiBjb250ZXh0LlxuICpcbiAqIEBwYXJhbSB7UmVhY3QuQ29udGV4dH0gW2NvbnRleHQ9UmVhY3RSZWR1eENvbnRleHRdIENvbnRleHQgcGFzc2VkIHRvIHlvdXIgYDxQcm92aWRlcj5gLlxuICogQHJldHVybnMge0Z1bmN0aW9ufSBBIGB1c2VTdG9yZWAgaG9vayBib3VuZCB0byB0aGUgc3BlY2lmaWVkIGNvbnRleHQuXG4gKi9cbmZ1bmN0aW9uIGNyZWF0ZVN0b3JlSG9vayhjb250ZXh0ID0gX0NvbnRleHQuUmVhY3RSZWR1eENvbnRleHQpIHtcbiAgY29uc3QgdXNlUmVkdXhDb250ZXh0ID0gLy8gQHRzLWlnbm9yZVxuICBjb250ZXh0ID09PSBfQ29udGV4dC5SZWFjdFJlZHV4Q29udGV4dCA/IF91c2VSZWR1eENvbnRleHQudXNlUmVkdXhDb250ZXh0IDogLy8gQHRzLWlnbm9yZVxuICAoMCwgX3VzZVJlZHV4Q29udGV4dC5jcmVhdGVSZWR1eENvbnRleHRIb29rKShjb250ZXh0KTtcbiAgcmV0dXJuIGZ1bmN0aW9uIHVzZVN0b3JlKCkge1xuICAgIGNvbnN0IHtcbiAgICAgIHN0b3JlXG4gICAgfSA9IHVzZVJlZHV4Q29udGV4dCgpOyAvLyBAdHMtaWdub3JlXG5cbiAgICByZXR1cm4gc3RvcmU7XG4gIH07XG59XG4vKipcbiAqIEEgaG9vayB0byBhY2Nlc3MgdGhlIHJlZHV4IHN0b3JlLlxuICpcbiAqIEByZXR1cm5zIHthbnl9IHRoZSByZWR1eCBzdG9yZVxuICpcbiAqIEBleGFtcGxlXG4gKlxuICogaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuICogaW1wb3J0IHsgdXNlU3RvcmUgfSBmcm9tICdyZWFjdC1yZWR1eCdcbiAqXG4gKiBleHBvcnQgY29uc3QgRXhhbXBsZUNvbXBvbmVudCA9ICgpID0+IHtcbiAqICAgY29uc3Qgc3RvcmUgPSB1c2VTdG9yZSgpXG4gKiAgIHJldHVybiA8ZGl2PntzdG9yZS5nZXRTdGF0ZSgpfTwvZGl2PlxuICogfVxuICovXG5cblxuY29uc3QgdXNlU3RvcmUgPSAvKiNfX1BVUkVfXyovY3JlYXRlU3RvcmVIb29rKCk7XG5leHBvcnRzLnVzZVN0b3JlID0gdXNlU3RvcmU7Il0sIm1hcHBpbmdzIjoiQUFBQSxZQUFZOztBQUVaQSxPQUFPLENBQUNDLFVBQVUsR0FBRyxJQUFJO0FBQ3pCRCxPQUFPLENBQUNFLGVBQWUsR0FBR0EsZUFBZTtBQUN6Q0YsT0FBTyxDQUFDRyxRQUFRLEdBQUcsS0FBSyxDQUFDO0FBRXpCLElBQUlDLFFBQVEsR0FBR0MsT0FBTyxDQUFDLHVCQUF1QixDQUFDO0FBRS9DLElBQUlDLGdCQUFnQixHQUFHRCxPQUFPLENBQUMsbUJBQW1CLENBQUM7O0FBRW5EO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFNBQVNILGVBQWVBLENBQUNLLE9BQU8sR0FBR0gsUUFBUSxDQUFDSSxpQkFBaUIsRUFBRTtFQUM3RCxNQUFNQyxlQUFlO0VBQUc7RUFDeEJGLE9BQU8sS0FBS0gsUUFBUSxDQUFDSSxpQkFBaUIsR0FBR0YsZ0JBQWdCLENBQUNHLGVBQWU7RUFBRztFQUM1RSxDQUFDLENBQUMsRUFBRUgsZ0JBQWdCLENBQUNJLHNCQUFzQixFQUFFSCxPQUFPLENBQUM7RUFDckQsT0FBTyxTQUFTSixRQUFRQSxDQUFBLEVBQUc7SUFDekIsTUFBTTtNQUNKUTtJQUNGLENBQUMsR0FBR0YsZUFBZSxFQUFFLENBQUMsQ0FBQzs7SUFFdkIsT0FBT0UsS0FBSztFQUNkLENBQUM7QUFDSDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFHQSxNQUFNUixRQUFRLEdBQUcsYUFBYUQsZUFBZSxFQUFFO0FBQy9DRixPQUFPLENBQUNHLFFBQVEsR0FBR0EsUUFBUSJ9

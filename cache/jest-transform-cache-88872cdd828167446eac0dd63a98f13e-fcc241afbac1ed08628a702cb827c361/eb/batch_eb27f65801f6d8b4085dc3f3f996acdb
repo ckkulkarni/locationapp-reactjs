@@ -1,0 +1,18 @@
+5e3025f08bd61a2cda9bf28759cd6b61
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setBatch = exports.getBatch = void 0;
+// Default to a dummy "batch" implementation that just runs the callback
+function defaultNoopBatch(callback) {
+  callback();
+}
+let batch = defaultNoopBatch; // Allow injecting another batching function later
+
+const setBatch = newBatch => batch = newBatch; // Supply a getter just to skip dealing with ESM bindings
+exports.setBatch = setBatch;
+const getBatch = () => batch;
+exports.getBatch = getBatch;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJkZWZhdWx0Tm9vcEJhdGNoIiwiY2FsbGJhY2siLCJiYXRjaCIsInNldEJhdGNoIiwibmV3QmF0Y2giLCJleHBvcnRzIiwiZ2V0QmF0Y2giXSwic291cmNlcyI6WyJiYXRjaC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBEZWZhdWx0IHRvIGEgZHVtbXkgXCJiYXRjaFwiIGltcGxlbWVudGF0aW9uIHRoYXQganVzdCBydW5zIHRoZSBjYWxsYmFja1xuZnVuY3Rpb24gZGVmYXVsdE5vb3BCYXRjaChjYWxsYmFjaykge1xuICBjYWxsYmFjaygpO1xufVxuXG5sZXQgYmF0Y2ggPSBkZWZhdWx0Tm9vcEJhdGNoOyAvLyBBbGxvdyBpbmplY3RpbmcgYW5vdGhlciBiYXRjaGluZyBmdW5jdGlvbiBsYXRlclxuXG5leHBvcnQgY29uc3Qgc2V0QmF0Y2ggPSBuZXdCYXRjaCA9PiBiYXRjaCA9IG5ld0JhdGNoOyAvLyBTdXBwbHkgYSBnZXR0ZXIganVzdCB0byBza2lwIGRlYWxpbmcgd2l0aCBFU00gYmluZGluZ3NcblxuZXhwb3J0IGNvbnN0IGdldEJhdGNoID0gKCkgPT4gYmF0Y2g7Il0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTtBQUNBLFNBQVNBLGdCQUFnQkEsQ0FBQ0MsUUFBUSxFQUFFO0VBQ2xDQSxRQUFRLEVBQUU7QUFDWjtBQUVBLElBQUlDLEtBQUssR0FBR0YsZ0JBQWdCLENBQUMsQ0FBQzs7QUFFdkIsTUFBTUcsUUFBUSxHQUFHQyxRQUFRLElBQUlGLEtBQUssR0FBR0UsUUFBUSxDQUFDLENBQUM7QUFBQUMsT0FBQSxDQUFBRixRQUFBLEdBQUFBLFFBQUE7QUFFL0MsTUFBTUcsUUFBUSxHQUFHQSxDQUFBLEtBQU1KLEtBQUs7QUFBQ0csT0FBQSxDQUFBQyxRQUFBLEdBQUFBLFFBQUEifQ==

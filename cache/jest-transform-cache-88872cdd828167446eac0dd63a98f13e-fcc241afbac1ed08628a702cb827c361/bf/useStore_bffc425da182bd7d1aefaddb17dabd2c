@@ -1,0 +1,49 @@
+95fc8ccc16c902ddbcc6f19b9e6a91a3
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createStoreHook = createStoreHook;
+exports.useStore = void 0;
+var _react = require("react");
+var _Context = require("../components/Context");
+var _useReduxContext = require("./useReduxContext");
+/**
+ * Hook factory, which creates a `useStore` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useStore` hook bound to the specified context.
+ */
+
+function createStoreHook(context = _Context.ReactReduxContext) {
+  const useReduxContext =
+  // @ts-ignore
+  context === _Context.ReactReduxContext ? _useReduxContext.useReduxContext : () => (0, _react.useContext)(context);
+  return function useStore() {
+    const {
+      store
+    } = useReduxContext(); // @ts-ignore
+
+    return store;
+  };
+}
+/**
+ * A hook to access the redux store.
+ *
+ * @returns {any} the redux store
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useStore } from 'react-redux'
+ *
+ * export const ExampleComponent = () => {
+ *   const store = useStore()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+const useStore = /*#__PURE__*/createStoreHook();
+exports.useStore = useStore;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfcmVhY3QiLCJyZXF1aXJlIiwiX0NvbnRleHQiLCJfdXNlUmVkdXhDb250ZXh0IiwiY3JlYXRlU3RvcmVIb29rIiwiY29udGV4dCIsIlJlYWN0UmVkdXhDb250ZXh0IiwidXNlUmVkdXhDb250ZXh0IiwidXNlRGVmYXVsdFJlZHV4Q29udGV4dCIsInVzZUNvbnRleHQiLCJ1c2VTdG9yZSIsInN0b3JlIiwiZXhwb3J0cyJdLCJzb3VyY2VzIjpbInVzZVN0b3JlLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUNvbnRleHQgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBSZWFjdFJlZHV4Q29udGV4dCB9IGZyb20gJy4uL2NvbXBvbmVudHMvQ29udGV4dCc7XG5pbXBvcnQgeyB1c2VSZWR1eENvbnRleHQgYXMgdXNlRGVmYXVsdFJlZHV4Q29udGV4dCB9IGZyb20gJy4vdXNlUmVkdXhDb250ZXh0Jztcbi8qKlxyXG4gKiBIb29rIGZhY3RvcnksIHdoaWNoIGNyZWF0ZXMgYSBgdXNlU3RvcmVgIGhvb2sgYm91bmQgdG8gYSBnaXZlbiBjb250ZXh0LlxyXG4gKlxyXG4gKiBAcGFyYW0ge1JlYWN0LkNvbnRleHR9IFtjb250ZXh0PVJlYWN0UmVkdXhDb250ZXh0XSBDb250ZXh0IHBhc3NlZCB0byB5b3VyIGA8UHJvdmlkZXI+YC5cclxuICogQHJldHVybnMge0Z1bmN0aW9ufSBBIGB1c2VTdG9yZWAgaG9vayBib3VuZCB0byB0aGUgc3BlY2lmaWVkIGNvbnRleHQuXHJcbiAqL1xuXG5leHBvcnQgZnVuY3Rpb24gY3JlYXRlU3RvcmVIb29rKGNvbnRleHQgPSBSZWFjdFJlZHV4Q29udGV4dCkge1xuICBjb25zdCB1c2VSZWR1eENvbnRleHQgPSAvLyBAdHMtaWdub3JlXG4gIGNvbnRleHQgPT09IFJlYWN0UmVkdXhDb250ZXh0ID8gdXNlRGVmYXVsdFJlZHV4Q29udGV4dCA6ICgpID0+IHVzZUNvbnRleHQoY29udGV4dCk7XG4gIHJldHVybiBmdW5jdGlvbiB1c2VTdG9yZSgpIHtcbiAgICBjb25zdCB7XG4gICAgICBzdG9yZVxuICAgIH0gPSB1c2VSZWR1eENvbnRleHQoKTsgLy8gQHRzLWlnbm9yZVxuXG4gICAgcmV0dXJuIHN0b3JlO1xuICB9O1xufVxuLyoqXHJcbiAqIEEgaG9vayB0byBhY2Nlc3MgdGhlIHJlZHV4IHN0b3JlLlxyXG4gKlxyXG4gKiBAcmV0dXJucyB7YW55fSB0aGUgcmVkdXggc3RvcmVcclxuICpcclxuICogQGV4YW1wbGVcclxuICpcclxuICogaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xyXG4gKiBpbXBvcnQgeyB1c2VTdG9yZSB9IGZyb20gJ3JlYWN0LXJlZHV4J1xyXG4gKlxyXG4gKiBleHBvcnQgY29uc3QgRXhhbXBsZUNvbXBvbmVudCA9ICgpID0+IHtcclxuICogICBjb25zdCBzdG9yZSA9IHVzZVN0b3JlKClcclxuICogICByZXR1cm4gPGRpdj57c3RvcmUuZ2V0U3RhdGUoKX08L2Rpdj5cclxuICogfVxyXG4gKi9cblxuZXhwb3J0IGNvbnN0IHVzZVN0b3JlID0gLyojX19QVVJFX18qL2NyZWF0ZVN0b3JlSG9vaygpOyJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBLElBQUFBLE1BQUEsR0FBQUMsT0FBQTtBQUNBLElBQUFDLFFBQUEsR0FBQUQsT0FBQTtBQUNBLElBQUFFLGdCQUFBLEdBQUFGLE9BQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRU8sU0FBU0csZUFBZUEsQ0FBQ0MsT0FBTyxHQUFHQywwQkFBaUIsRUFBRTtFQUMzRCxNQUFNQyxlQUFlO0VBQUc7RUFDeEJGLE9BQU8sS0FBS0MsMEJBQWlCLEdBQUdFLGdDQUFzQixHQUFHLE1BQU0sSUFBQUMsaUJBQVUsRUFBQ0osT0FBTyxDQUFDO0VBQ2xGLE9BQU8sU0FBU0ssUUFBUUEsQ0FBQSxFQUFHO0lBQ3pCLE1BQU07TUFDSkM7SUFDRixDQUFDLEdBQUdKLGVBQWUsRUFBRSxDQUFDLENBQUM7O0lBRXZCLE9BQU9JLEtBQUs7RUFDZCxDQUFDO0FBQ0g7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRU8sTUFBTUQsUUFBUSxHQUFHLGFBQWFOLGVBQWUsRUFBRTtBQUFDUSxPQUFBLENBQUFGLFFBQUEsR0FBQUEsUUFBQSJ9

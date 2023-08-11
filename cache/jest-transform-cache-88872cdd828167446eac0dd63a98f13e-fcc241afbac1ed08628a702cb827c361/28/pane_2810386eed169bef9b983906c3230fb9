@@ -1,0 +1,15 @@
+10521d60880f70262be97cd54ac77f8a
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.withPane = withPane;
+function withPane(props, context) {
+  const pane = props.pane ?? context.pane;
+  return pane ? {
+    ...props,
+    pane
+  } : props;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJ3aXRoUGFuZSIsInByb3BzIiwiY29udGV4dCIsInBhbmUiXSwic291cmNlcyI6WyJwYW5lLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBmdW5jdGlvbiB3aXRoUGFuZShwcm9wcywgY29udGV4dCkge1xuICAgIGNvbnN0IHBhbmUgPSBwcm9wcy5wYW5lID8/IGNvbnRleHQucGFuZTtcbiAgICByZXR1cm4gcGFuZSA/IHtcbiAgICAgICAgLi4ucHJvcHMsXG4gICAgICAgIHBhbmVcbiAgICB9IDogcHJvcHM7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFPLFNBQVNBLFFBQVFBLENBQUNDLEtBQUssRUFBRUMsT0FBTyxFQUFFO0VBQ3JDLE1BQU1DLElBQUksR0FBR0YsS0FBSyxDQUFDRSxJQUFJLElBQUlELE9BQU8sQ0FBQ0MsSUFBSTtFQUN2QyxPQUFPQSxJQUFJLEdBQUc7SUFDVixHQUFHRixLQUFLO0lBQ1JFO0VBQ0osQ0FBQyxHQUFHRixLQUFLO0FBQ2IifQ==

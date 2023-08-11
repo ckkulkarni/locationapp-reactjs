@@ -1,0 +1,13 @@
+ce29294928bfa66ad48aec2f184607e2
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createInvalidArgFactory = createInvalidArgFactory;
+function createInvalidArgFactory(arg, name) {
+  return (dispatch, options) => {
+    throw new Error(`Invalid value of type ${typeof arg} for ${name} argument when connecting component ${options.wrappedComponentName}.`);
+  };
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVJbnZhbGlkQXJnRmFjdG9yeSIsImFyZyIsIm5hbWUiLCJkaXNwYXRjaCIsIm9wdGlvbnMiLCJFcnJvciIsIndyYXBwZWRDb21wb25lbnROYW1lIl0sInNvdXJjZXMiOlsiaW52YWxpZEFyZ0ZhY3RvcnkuanMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZUludmFsaWRBcmdGYWN0b3J5KGFyZywgbmFtZSkge1xuICByZXR1cm4gKGRpc3BhdGNoLCBvcHRpb25zKSA9PiB7XG4gICAgdGhyb3cgbmV3IEVycm9yKGBJbnZhbGlkIHZhbHVlIG9mIHR5cGUgJHt0eXBlb2YgYXJnfSBmb3IgJHtuYW1lfSBhcmd1bWVudCB3aGVuIGNvbm5lY3RpbmcgY29tcG9uZW50ICR7b3B0aW9ucy53cmFwcGVkQ29tcG9uZW50TmFtZX0uYCk7XG4gIH07XG59Il0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBTyxTQUFTQSx1QkFBdUJBLENBQUNDLEdBQUcsRUFBRUMsSUFBSSxFQUFFO0VBQ2pELE9BQU8sQ0FBQ0MsUUFBUSxFQUFFQyxPQUFPLEtBQUs7SUFDNUIsTUFBTSxJQUFJQyxLQUFLLENBQUUseUJBQXdCLE9BQU9KLEdBQUksUUFBT0MsSUFBSyx1Q0FBc0NFLE9BQU8sQ0FBQ0Usb0JBQXFCLEdBQUUsQ0FBQztFQUN4SSxDQUFDO0FBQ0gifQ==
